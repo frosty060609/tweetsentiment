@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4: Visualization</title>
+    <style type="text/css">
+        .header {
+            background-color: #555;
+            color: #ddd;
+        }
+        .header .lead {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+	<style>
+	mark { 
+	    background-color: lavenderblush;
+	    color: brown;
+	}
+	</style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="page-header center">
+                <h1>Part 3: <small>Statistics</small></h1>
+            </div>
+			<h2>statistic.py</h2>
+			<p>
+			<ol>
+				<li>I first loop through the file to calculate the mean of computer time and store every computer time to a list. Then I use another loop to compute the population variance(Since there is no specification about the variance, I compute the population variance instead of sample variance for simplicity). The mean and variance of the computer time in q1 :	12.3425655977	 128.299801387</li>
+				<li>Just use the method <mark>mean</mark> and <mark>variance</mark> in module numpy. The mean and variance of the computer time in q2 :	12.3425655977 	128.299801387</li>
+				<li>Just compute <mark>mean</mark> and <mark>variance</mark> of computer time for male and female separately. The mean and variance of the computer time for male in q3:	11.8583599574	124.783984957. The mean and variance of the computer time for female in q3:	  12.7488829312  130.888236018</li>
+				<li>Use the method <mark>corrcoef</mark> in numpy, which returns the correlation matrix of age and computer time. The (0,1)-th entry is the pearson correlation. The pearson correlation value between the age and the computer time in q4:	-0.039184538611, which is close to 0. This implies there is almost no linear correlation between age and computer time. When the age varies, we don't know how does the computer time vary.</li>
+				<li>Same as part 4. The pearson correlation value between the playgames and the watchtv in q5:	0.255433347223. This implies there is a small chance (the correlation is 0.255433347223, much less than 1 but not close to 0.) that people who play games more may watch tv more.</li>
+			</ol>
+			</p>
+			<h2>probability.py</h2>
+			<p>
+			    Just count the total population and the population with specified features. In part 4 and 5, the total population is specified to man or woman.	
+			</p>
+			<h2>t_test.py and permutation.py</h2>
+			<p>The t_test statistics is 1.77696715175 and the p_value is 0.075721462062 which is larger than 0.05, the significance level. So we accept the null hypothesis that there no difference. However, the p value is low which means either that the null hypothesis is true and a highly improbable event has occurred, or that the null hypothesis is false. So there is no enough evidence to suggest that the average number of hours spent on computer per week of males is equal to that of females.</p>
+			<p>In the permutation test, we randomly pick permutation 1000 times.Here is one experiment's result: 
+			<ul>
+				<li>The probability of observing the mean 0.890522973787 when assume the null hypothesis is true: 0.068.</li> 
+			</ul>
+				Since the significance level is 0.05, we accept the null hypothesis. But again, this only means either that the null hypothesis is true and a highly improbable event has occurred, or that the null hypothesis is false. So we get the same conclusion as in t-test. </p>
+
+        <div class="col-md-2"></div>
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+	<script>
+
+</body>
+</html>
